@@ -1,0 +1,2 @@
+Adafruit CircuitPython 8.0.0-alpha.1-33-g0bc296406 on 2022-07-17; BornHack 2022 Game Badge with rp2040
+Board ID:bornhack_badge2022
