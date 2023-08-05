@@ -23,7 +23,7 @@ class Renderer:
                     
                     globals.pixel[pixelIndex] = self.AddColors(
                         globals.pixel[pixelIndex],
-                        self.ApplyBrightness(objColor, distanceBrightness),
+                        self.ApplyBrightness(objColor, distanceBrightness * obj.brightness),
                     )
         globals.pixel.show()
 
