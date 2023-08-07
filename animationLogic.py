@@ -7,13 +7,14 @@ import neopixel
 from runningLightsAnimation import RunningLightsAnimation
 from groupAllObjectsAnimation import GroupAllObjectsAnimation
 from glowAnimation import GlowAnimation
-
+from throwAndCrashAnimation import ThrowAndCrashAnimation
 
 class Logic:
     state: int = 0
     noInteraction: RunningLightsAnimation
     groupAllObjectsAnimation: GroupAllObjectsAnimation
     glowAnimation: GlowAnimation
+    throwAndCrashAnimation: ThrowAndCrashAnimation
 
     def __init__(
         self,
@@ -21,9 +22,9 @@ class Logic:
     ):
         self.noInteraction = RunningLightsAnimation()
         self.glowAnimation = GlowAnimation()
-        self.noInteraction.initialize(lightObjects)
+        #self.noInteraction.initialize(lightObjects)
         self.groupAllObjectsAnimation = GroupAllObjectsAnimation(10)
-
+        self.throwAndCrashAnimation = ThrowAndCrashAnimation()
     
     
     def loop(self, lightObjects: [], gameTime: GameTime, inputs: Inputs):
@@ -38,5 +39,5 @@ class Logic:
             self.glowAnimation.loop(lightObjects, gameTime)
         
         else:
-            self.noInteraction.loop(lightObjects, gameTime, inputs)
-
+            #self.noInteraction.loop(lightObjects, gameTime, inputs)
+            self.throwAndCrashAnimation.loop(lightObjects, gameTime, inputs)
