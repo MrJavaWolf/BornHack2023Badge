@@ -20,3 +20,4 @@ while True:
     renderer.renderer(lightObjects)
     #time.sleep(globals.TIME_BETWEEN_FRAMES)
     #gameTime.print_state()
+
